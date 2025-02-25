@@ -1,0 +1,28 @@
+.Track {
+    background-color: blueviolet;
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    justify-content: center;
+    border: 1px black solid;
+    margin: 5px;
+}
+
+.TrackInfo {
+    margin-left: 40px;
+    width: 80%;
+}
+
+.AddTrack {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    font-size: large;
+}
+
+.RemoveTrack {
+    width: 40px;
+    height: 40px;
+    align-self: center;
+    font-size: large;
+}
