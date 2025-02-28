@@ -1,5 +1,32 @@
 .App {
   text-align: center;
+  color: white;
+}
+
+h1 {
+  font-size: 80px;
+  margin-top: 50px;
+}
+
+button {
+  color: white;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+}
+
+input {
+  color: white;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  padding: 0;
+  text-align: center;
 }
 
 .SplitPanel {

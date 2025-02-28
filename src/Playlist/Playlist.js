@@ -9,14 +9,15 @@ function Playlist(props) {
 
     return (
         <div className="Playlist">
-            <input onChange={handleNameChange} defaultValue={"New Playlist"} />
+            <input className="PlaylistInput" onChange={handleNameChange} defaultValue={"New Playlist"} />
+            <button className="PlaylistButton" onClick={props.onSave}>
+                SAVE TO SPOTIFY
+            </button>
             <TrackList
                 tracks={props.playListTracks}
                 isRemoval={true}
                 onRemove={props.onRemove} />
-            <button onClick={props.onSave}>
-                SAVE TO SPOTIFY
-            </button>
+
         </div>
     );
 };

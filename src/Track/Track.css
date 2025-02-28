@@ -1,11 +1,13 @@
 .Track {
-    background-color: blueviolet;
+    background-color: rgba(0, 0, 0, 0.7);
     display: flex;
     flex-direction: row;
     width: 90%;
     justify-content: center;
-    border: 1px black solid;
     margin: 5px;
+    outline: none;
+    border: none;
+    border-radius: 5px;
 }
 
 .TrackInfo {
@@ -14,15 +16,33 @@
 }
 
 .AddTrack {
-    width: 40px;
     height: 40px;
+    width: 40px;
     align-self: center;
-    font-size: large;
+    background-color: rgb(36, 112, 46);
+}
+
+.AddTrack:hover {
+    background-color: #3e8e41;
+    font-weight: bold;
+}
+
+.AddTrack:active {
+  background-color: #36b33a;
 }
 
 .RemoveTrack {
-    width: 40px;
     height: 40px;
+    width: 40px;
     align-self: center;
-    font-size: large;
+    background-color: rgb(122, 7, 7);
+}
+
+.RemoveTrack:hover {
+    background-color: #e70f0f;
+    font-weight: bold;
+}
+
+.RemoveTrack:active {
+  background-color: #ff3535;
 }

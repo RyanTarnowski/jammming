@@ -1,3 +1,33 @@
 .SearchBar {
-    background-color: aquamarine;
+    margin: 50px;
+}
+
+.SearchInput {
+    height: 50px;
+    width: 600px;
+    margin-left: 150px;
+    font-size: 1.5em;
+    background-color: rgba(255, 255, 255, 0.3);
+}
+
+::placeholder {
+    color: rgb(211, 205, 205);
+    font-weight: 100;
+}
+
+.SearchButton {
+    height: 50px;
+    width: 150px;
+    font-size: 20px;
+    margin-left: 10px;
+    background-color: rgb(19, 39, 153);
+}
+
+.SearchButton:hover {
+    background-color: rgb(36, 54, 153);
+    font-weight: bold;
+}
+
+.SearchButton:active {
+  background-color: rgb(62, 87, 226);
 }

@@ -14,8 +14,8 @@ function SearchBar(props) {
 
     return (
         <div className="SearchBar">   
-            <input onChange={handleTermChange} />
-            <button onClick={search}>
+            <input className="SearchInput" onChange={handleTermChange} placeholder="Enter track name" />
+            <button className="SearchButton" onClick={search}>
                 SEARCH
             </button>
         </div>

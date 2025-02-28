@@ -5,13 +5,17 @@ import { useCallback, useState } from 'react';
 import SearchBar from './SearchBar/SearchBar';
 import SearchResults from './SearchResults/SearchResults';
 import Playlist from './Playlist/Playlist';
+import Spotify from './Ulility/SpotifyAPI';
 
 function App() {
+  const [searchResultsData, setSearchResultsData] = useState([]);
   const [playListTracks, setPlayListTracks] = useState([]);
   const [playlistName, setPlaylistName] = useState("New Playlist");
-  const [searchResultsData, setSearchResultsData] = useState([]);
 
   const search = useCallback((term) => {
+    Spotify.search(term).then(setSearchResultsData);
+
+    /*
     setSearchResultsData([
       {
           id: 1,
@@ -34,7 +38,7 @@ function App() {
         album: "SuperLong__________________Album3",
         uri: "SuperLong__________________url3"
     },
-    ]);
+    ]); */
   }, []);
 
   const addTrack = useCallback((track) => {
@@ -55,7 +59,11 @@ function App() {
   const savePlaylist = useCallback(() => {
     const trackURIs = playListTracks.map((track) => track.uri);
 
-    alert(trackURIs);
+    Spotify.savePlaylist(playlistName, trackURIs).then(() => {
+      setPlaylistName("New Playlist");
+      setPlayListTracks([]);
+    });
+
   }, [playlistName, playListTracks]);
 
 
@@ -63,12 +71,10 @@ function App() {
     <div className="App">
       <h1>Jammming</h1>
       <SearchBar onSearch={search} />
-
       <div className="SplitPanel">
         <SearchResults SearchResultsData={searchResultsData} onAdd={addTrack} />
         <Playlist playlistName={playlistName} playListTracks={playListTracks} onNameChange={updatePlaylistName} onRemove={removeTrack} onSave={savePlaylist} />
       </div>
-
     </div>
   );
 }
