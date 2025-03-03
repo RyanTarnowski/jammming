@@ -1,26 +1,23 @@
 .Playlist {
-    color: white;
     background-color: rgba(255, 255, 255, 0.3);
     border-radius: 5px;
-    width: 50%;
-    margin-left: 25px;
-    margin-right: 50px;
+    width: 100%;
+    margin: 10px;
 }
 
 .PlaylistInput {
     height: 30px;
-    width: 300px;
+    width: 75%;
     margin-top: 20px;
-    margin-bottom: 20px;
-    margin-left: 150px;
-    font-size: 1em;
+    margin-bottom: 10px;
+    font-size: 1.25em;
     background-color: rgba(0, 0, 0, 0.7);
 }
 
 .PlaylistButton {
     height: 30px;
     width: 150px;
-    margin-left: 10px;
+    margin: 20px;
     background-color: rgb(36, 112, 46);
 }
 

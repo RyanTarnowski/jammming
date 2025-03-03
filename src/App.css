@@ -16,7 +16,6 @@ button {
   outline: none;
   border: none;
   border-radius: 5px;
-  padding: 0;
 }
 
 input {
@@ -25,12 +24,23 @@ input {
   outline: none;
   border: none;
   border-radius: 5px;
-  padding: 0;
   text-align: center;
+}
+
+::placeholder {
+  color: rgb(211, 205, 205);
+  font-weight: 100;
 }
 
 .SplitPanel {
   display: flex;
   flex-direction: row;
   margin: 10px;
+}
+
+@media (max-width: 700px) {
+  .SplitPanel {
+    flex-direction: column;
+    align-items: center;
+  }
 }

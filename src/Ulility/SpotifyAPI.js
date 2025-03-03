@@ -53,6 +53,30 @@ const Spotify = {
                     uri: track.uri
                 }));
         });
+            /*
+            setSearchResultsData([
+              {
+                  id: 1,
+                  name: "TrackName1",
+                  artist: "Artist1",
+                  album: "Album1",
+                  uri: "url1"
+              },
+              {
+                  id: 2,
+                  name: "TrackName2",
+                  artist: "Artist2",
+                  album: "Album2",
+                  uri: "url2"
+              },
+              {
+                id: 3,
+                name: "SuperLong__________________TrackName3",
+                artist: "SuperLong__________________Artist3",
+                album: "SuperLong__________________Album3",
+                uri: "SuperLong__________________url3"
+            },
+            ]); */
     },
 
     savePlaylist(name, trackURIs) {
