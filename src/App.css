@@ -27,6 +27,15 @@ input {
   text-align: center;
 }
 
+select {
+  color: white;
+  text-decoration: none;
+  outline: none;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+}
+
 ::placeholder {
   color: rgb(211, 205, 205);
   font-weight: 100;
@@ -36,6 +45,22 @@ input {
   display: flex;
   flex-direction: row;
   margin: 10px;
+}
+
+.ConnectButton {
+    height: 30px;
+    width: 150px;
+    margin: 20px;
+    background-color: rgb(36, 112, 46);
+}
+
+.ConnectButton:hover {
+    background-color: #3e8e41;
+    font-weight: bold;
+}
+
+.ConnectButton:active {
+  background-color: #36b33a;
 }
 
 @media (max-width: 700px) {

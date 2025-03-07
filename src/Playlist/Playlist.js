@@ -7,9 +7,33 @@ function Playlist(props) {
         props.onNameChange(event.target.value);
     }, [props.onNameChange]);
 
+    const handlePlaylistChange = useCallback((event) => {
+        props.onPlaylistChange(event.target.value);
+    }, [props.onPlaylistChnage]);
+
+    const determineInput = () => {
+        if (props.playlistId === ""){
+            return(
+                <input className="PlaylistInput" onChange={handleNameChange} placeholder="Enter playlist name" />
+            )
+        }
+    };
+
     return (
         <div className="Playlist">
-            <input className="PlaylistInput" onChange={handleNameChange} placeholder="Enter playlist name" />
+
+        <select className="PlaylistInput" onChange={handlePlaylistChange}>
+            <option value="" key="0">Create New Playlist</option>
+
+            {props.playlists.map((playlist) => {
+                return (
+                    <option value={playlist.id} key={playlist.id}>{playlist.name}</option>
+                );
+            })}
+        </select>
+
+            {determineInput()}
+ 
             <TrackList
                 tracks={props.playListTracks}
                 isRemoval={true}
