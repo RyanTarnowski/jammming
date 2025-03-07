@@ -1,4 +1,18 @@
-# Getting Started with Create React App
+# Jammming React App
+
+This application is designed to allow a Spotify user to:
+-Connect to Spotify
+-Display existing playlists
+-Create new playlists
+-Search for tracks
+-Add tracks to new and existing playlists
+-Remove tracks from new and existing playlists
+-Save a playlist to Spotify
+
+This project was created as part of my learning journey in React.
+
+
+
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
